@@ -14,19 +14,20 @@ for($i=0;$i<$categoryLength;$i++)
 {
     $subCategoryData=array();//存放一级目录下对应的所有二级类目数组
 
-    for($i=0;$i<$subCategoryLength;$i++)
+    for($j=0;$j<$subCategoryLength;$j++)
     {
-        $subCategoryData = array(
-            "subCategoryId" => $subCategory[$i]['id'],
-            "subCategoryName" => $subCategory[$i]['name'],
-            "subCategoryIcon" => $subCategory[$i]['pic']
+        $data = array(
+            "subCategoryId" => $subCategory[$j]['id'],
+            "subCategoryName" => $subCategory[$j]['name'],
+            "subCategoryIcon" => $subCategory[$j]['pic']
         );
 
+        $subCategoryData[$j] = $data;
     }
 
     $data = array(
-        "CategoryId" => $category[$i]['a_id'],
-        "CategoryName" => $category[$i]['a_name'],
+        "CategoryId" => $category[$i]['id'],
+        "CategoryName" => $category[$i]['name'],
         "subCategory" =>$subCategoryData
     );
 

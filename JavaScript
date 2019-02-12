@@ -54,3 +54,10 @@ function psgBirthdayToType(birthday,statedDate){
         return "";
     }
 }
+
+
+//保留两位小数点
+var num1 = 33;var num2 = 22.232;var num3 = 22.235;
+num1.toFixed(2);//33.00
+num2.toFixed(2);//22.23
+num3.toFixed(2);//22.24 四舍五入
